@@ -6,7 +6,7 @@ dbt_internal_packages/
 notebooks/snowflake_config.py
 profiles.yml
 rsa_key.pem
-rsa_key_pub
+rsa_key.pub
 .env
 __pycache__/
 *.pyc
