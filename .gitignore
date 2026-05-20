@@ -1,0 +1,13 @@
+target/
+_Process/
+dbt_packages/
+logs/
+dbt_internal_packages/
+notebooks/snowflake_config.py
+profiles.yml
+rsa_key.pem
+rsa_key_pub
+.env
+__pycache__/
+*.pyc
+.venv/

@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: dim_users
+    description: "User dimension with segments and tiers"
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+
+      - name: revenue_tier
+        tests:
+          - accepted_values:
+              values: ['0. No purchase', '1. Low (< $50)', '2. Mid ($50-200)', '3. High (> $200)']
+
+      - name: user_type
+        tests:
+          - accepted_values:
+              values: ['browser', 'one-time buyer', 'repeat buyer']
+
+  - name: fct_sessions
+    description: "Session fact table with user context"
+    columns:
+      - name: "user_id || '-' || user_session"
+        tests:
+          - unique
+          - not_null
+      
+      - name: user_id
+        tests:
+          - not_null
+          - relationships: # foreign key check
+              to: ref('dim_users')
+              field: user_id
+
+  - name: fct_purchases
+    description: "Purchase fact table with user context"
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_users')
+              field: user_id

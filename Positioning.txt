@@ -1,0 +1,35 @@
+Option A (stronger framing — recommended)
+
+Analytics Engineering Project — E-commerce Data Platform (Snowflake + dbt)
+
+Built an end-to-end data pipeline processing 89M events / 15M users in Snowflake
+Designed layered data models in dbt (staging → intermediate → marts) following modular architecture
+Implemented data quality checks (schema, not_null, accepted values, referential integrity, custom business tests)
+Created session- and user-level aggregations to support behavioral and funnel analysis
+Modeled fact and dimension tables (fct_sessions, fct_purchases, dim_users) for downstream BI consumption
+Applied SQL optimizations and window functions for large-scale aggregations
+Developed analytical layer in Python (cohort analysis, LTV, A/B testing) on top of structured data
+Built Power BI dashboards to communicate insights
+
+
+Option B (if you want to lean more DE)
+
+Data Pipeline & Modeling Project — Snowflake + dbt
+
+Ingested and unified multiple raw datasets into a structured warehouse layer
+Built transformation pipeline using dbt with reusable models and dependency graph
+Implemented data validation and testing framework (dbt tests + custom SQL assertions)
+Created production-like data marts for analytics consumption
+Ensured data consistency across layers (raw → staging → marts)
+Simulated real-world data quality monitoring scenarios
+
+
+Product Analytics version:
+
+End-to-end Ecommerce User Journey Analysis Project — Snowflake + dbt
+- Built an end-to-end data pipeline processing 89M events / 15M users in Snowflake
+- Identified $136M revenue opportunity through cohort analysis, LTV prediction with <7% error, 
+and association rules mining. 
+- Applied SQL optimizations and window functions for large-scale aggregations
+- Developed analytical layer in Python (cohort analysis, LTV, A/B testing) on top of structured data
+- Delivered actionable recommendations for conversion, retention and cross-sell.

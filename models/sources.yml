@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw
+    database: ECOMMERCE_BEHAVIOR
+    schema: RAW
+    tables:
+      - name: raw_events_2019_oct
+      - name: raw_events_2019_nov
+      - name: raw_events_2019_dec
+      - name: raw_events_2020_jan
+      - name: raw_events_2020_feb
+      - name: raw_events_2020_mar
+      - name: raw_events_2020_apr

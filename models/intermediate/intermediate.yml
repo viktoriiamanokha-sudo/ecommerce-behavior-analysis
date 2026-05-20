@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: int_users
+    description: "One row per user with aggregated behavior"
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+
+      - name: user_type
+        tests:
+          - accepted_values:
+              values: ['browser', 'one-time buyer', 'repeat buyer']
+
+      - name: total_revenue
+        tests:
+          - not_null
+
+  - name: int_sessions
+    description: "One row per user per session with behavioral flags"
+    columns:
+      - name: "user_id || '-' || user_session"
+        tests:
+          - unique
+          - not_null
+
+      - name: session_stage
+        tests:
+          - accepted_values:
+              values: ['viewed', 'carted', 'purchased', 'unknown']
+
+  - name: int_purchases
+    description: "One row per purchase event"
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+
+      - name: price
+        tests:
+          - not_null
