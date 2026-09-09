@@ -4,7 +4,7 @@ dbt_packages/
 logs/
 dbt_internal_packages/
 notebooks/snowflake_config.py
-profiles.yml
+main_profiles.yml
 rsa_key.pem
 rsa_key.pub
 .env
